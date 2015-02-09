@@ -12,7 +12,7 @@ get '/hackeryou' do
 end
 
 get '/hi/?:name?' do
-  "You did it " + params[:name] + "!"
+  "You did it " + "#{params[:name]}" + "!"
 end
 
 post '/users' do
