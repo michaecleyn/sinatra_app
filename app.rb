@@ -3,10 +3,11 @@ require 'sinatra/reloader'
 require 'json'
 
 get '/now' do
-  "The current time is:  ?"
+  time = Time.now
+  "The current time is: #{time} ?"
 end
 
-get '/hackeryou'
+get '/hackeryou' do
   "Is Awesome!"
 end
 
