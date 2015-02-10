@@ -13,4 +13,24 @@ class AppTest < MiniTest::Test
     response = get('/hackeryou')
     assert_equal "Is Amazing!", response.body
   end
+
+  def test_hello_minitest
+    response = get('/hello')
+    assert_equal "Hello minitest!", response.body
+  end
+
+  def test_week
+    response = get('/week')
+    assert_equal Date.today.strftime("%A"), response.body
+  end
+
+  def test_app_includes_hacker_link
+    response = get('/')
+    assert_includes response.body, "http://hackeryou.com/"
+  end
+
+  def test_has_name
+    response = get('/Michael')
+    assert_equal "Michael", response.body
+  end
 end

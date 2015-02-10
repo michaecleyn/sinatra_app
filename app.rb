@@ -11,8 +11,22 @@ get '/hackeryou' do
   "Is Amazing!"
 end
 
-get '/hi/?:name?' do
-  "You did it #{params[:name]}!"
+get '/hello' do
+  "Hello minitest!"
+end
+
+get '/week' do
+  Date.today.strftime("%A")
+end
+
+get '/hello' do
+  "Hello minitest!"
+end
+
+
+get '/hi/:name' do
+  name = params[:name].to_s
+  erb :index, locals:{name: name}
 end
 
 post '/users' do
@@ -23,6 +37,14 @@ post '/books' do
   data = JSON.parse(request.body.read)
 
   erb :books, locals: {data: data}
+end
+
+get '/' do
+  erb :index
+end
+
+get '/Michael' do
+  "Michael"
 end
 
 #CURL
