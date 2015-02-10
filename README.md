@@ -33,4 +33,3 @@ broken-sinatra
   * [hint 1](https://help.github.com/articles/create-a-repo)
   * [hint 2](https://help.github.com/articles/adding-a-remote)
 
-#### Answers can be found in the `answers` branch
