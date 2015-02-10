@@ -2,6 +2,18 @@ require 'sinatra'
 require 'sinatra/reloader'
 require 'json'
 
+get '/' do
+  erb :index
+end
+
+get '/contact' do
+  erb :contact
+end
+
+get '/about' do
+  erb :about
+end
+
 get '/now' do
   time = Time.now
   "The current time is: #{time} ?"
@@ -37,10 +49,6 @@ post '/books' do
   data = JSON.parse(request.body.read)
 
   erb :books, locals: {data: data}
-end
-
-get '/' do
-  erb :index
 end
 
 get '/Michael' do
