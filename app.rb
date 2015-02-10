@@ -12,11 +12,11 @@ get '/hackeryou' do
 end
 
 get '/hi/?:name?' do
-  "You did it " + "#{params[:name]}" + "!"
+  "You did it #{params[:name]}!"
 end
 
 post '/users' do
-  "You posted the following data: #{params.inspect}"
+    "You posted the following data: #{params.inspect}"
 end
 
 post '/books' do
@@ -24,3 +24,7 @@ post '/books' do
 
   erb :books, locals: {data: data}
 end
+
+#CURL
+#you can use curl in the bash terminal to post to a webpage.
+#url --d-urlencode "it automatically parses the url and adds '+s'"
