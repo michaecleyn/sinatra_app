@@ -8,4 +8,9 @@ class AppTest < MiniTest::Test
   def app
     Sinatra::Application
   end
+
+  def test_hackeryou_endpoint
+    response = get('/hackeryou')
+    assert_equal "Is Amazing!", response.body
+  end
 end

@@ -8,7 +8,7 @@ get '/now' do
 end
 
 get '/hackeryou' do
-  "Is Awesome!"
+  "Is Amazing!"
 end
 
 get '/hi/?:name?' do
